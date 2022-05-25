@@ -43,7 +43,7 @@ class Controller extends BaseController
         $result = [];
         if(!empty($data['app'])){
             $result['id'] = $data['app']['id'];
-            if(isset($data['developer'])){
+            if(!empty($data['developer'])){
                 $result['author_info']['name'] = $data['developer']['name'];
                 $result['author_info']['url'] = $data['developer']['url'];
             }
