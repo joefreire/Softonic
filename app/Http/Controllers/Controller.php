@@ -28,7 +28,7 @@ class Controller extends BaseController
             $results = array_filter($json, function($json) use ($id) {
                 return $json['id'] == $id;
             });
-            return $results[0] ?? [];
+            return array_values($results)[0] ?? [];
         } else {
             return 'File not exist';
         }
